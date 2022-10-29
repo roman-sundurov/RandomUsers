@@ -37,12 +37,10 @@ class RandomUsersTests: XCTestCase {
     let jsonData = getTestJSONData()
     do {
       _ = try JSONDecoder().decode(Response.self.self, from: jsonData)
-    }
-    catch {
+    } catch {
       XCTFail("Failed to decode JSON into the model: \(error)")
     }
   }
-
 
   private func getTestJSONData() -> Data {
     // let bundle = Bundle(for: type(of: self))
@@ -55,7 +53,8 @@ class RandomUsersTests: XCTestCase {
       fatalError("randomUsers.json file not found")
     }
     let internalURL = URL(fileURLWithPath: path)
-    return try! Data(contentsOf: internalURL)
+    let data = try? Data(contentsOf: internalURL)
+    return data!
   }
 
 }
