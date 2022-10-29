@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		473841EE2885E44F008E5BB0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473841ED2885E44F008E5BB0 /* User.swift */; };
+		47449F5E28F6D28D001323C4 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = 47449F5D28F6D28D001323C4 /* ToastUI */; };
+		479792FB288C02250069404F /* randomUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = 479792FA288C02250069404F /* randomUsers.json */; };
 		479CB54C287B97710056A530 /* RandomUsersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479CB54B287B97710056A530 /* RandomUsersApp.swift */; };
 		479CB54E287B97710056A530 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479CB54D287B97710056A530 /* UserView.swift */; };
 		479CB550287B97730056A530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479CB54F287B97730056A530 /* Assets.xcassets */; };
@@ -38,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		473841ED2885E44F008E5BB0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		479792FA288C02250069404F /* randomUsers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = randomUsers.json; sourceTree = "<group>"; };
 		479CB548287B97710056A530 /* RandomUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479CB54B287B97710056A530 /* RandomUsersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUsersApp.swift; sourceTree = "<group>"; };
 		479CB54D287B97710056A530 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47449F5E28F6D28D001323C4 /* ToastUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +111,7 @@
 				473841ED2885E44F008E5BB0 /* User.swift */,
 				479CB54F287B97730056A530 /* Assets.xcassets */,
 				479CB551287B97730056A530 /* Preview Content */,
+				479792FA288C02250069404F /* randomUsers.json */,
 			);
 			path = RandomUsers;
 			sourceTree = "<group>";
@@ -152,6 +157,9 @@
 			dependencies = (
 			);
 			name = RandomUsers;
+			packageProductDependencies = (
+				47449F5D28F6D28D001323C4 /* ToastUI */,
+			);
 			productName = RandomUsers;
 			productReference = 479CB548287B97710056A530 /* RandomUsers.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +232,9 @@
 				Base,
 			);
 			mainGroup = 479CB53F287B97710056A530;
+			packageReferences = (
+				47449F5C28F6D28D001323C4 /* XCRemoteSwiftPackageReference "ToastUI" */,
+			);
 			productRefGroup = 479CB549287B97710056A530 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -242,6 +253,7 @@
 			files = (
 				479CB553287B97730056A530 /* Preview Assets.xcassets in Resources */,
 				479CB550287B97730056A530 /* Assets.xcassets in Resources */,
+				479792FB288C02250069404F /* randomUsers.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +607,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		47449F5C28F6D28D001323C4 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quanshousio/ToastUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		47449F5D28F6D28D001323C4 /* ToastUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47449F5C28F6D28D001323C4 /* XCRemoteSwiftPackageReference "ToastUI" */;
+			productName = ToastUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 479CB540287B97710056A530 /* Project object */;
 }
