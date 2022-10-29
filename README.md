@@ -1,5 +1,5 @@
 # RandomUsers
-The test project where I use SwiftUI skills and the randomuser.me API. The application displays a list of random users.
+The project where I use SwiftUI skills and the randomuser.me API. The application displays a list of random users.
 
 ## Stack:
 - Language - Swift
