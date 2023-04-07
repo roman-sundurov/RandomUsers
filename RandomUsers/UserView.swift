@@ -12,18 +12,37 @@ struct UsersView: View {
 
     var body: some View {
         NavigationView {
-            List(userData.users) { user in
-                HStack {
-                    AsyncImage(url: URL(string: user.picture.thumbnail)) { image in
-                        image.clipShape(Circle())
-                    } placeholder: {
-                        Image(systemName: "person")
-                            .frame(width: 50, height: 50, alignment: .center)
+            VStack(spacing: 0) {
+                List(userData.users) { user in
+                    HStack {
+                        AsyncImage(url: URL(string: user.picture.thumbnail)) { image in
+                            image.clipShape(Circle())
+                        } placeholder: {
+                            Image(systemName: "person")
+                                .frame(width: 50, height: 50, alignment: .center)
+                        }
+                        Text(user.fullName)
                     }
-                    Text(user.fullName)
                 }
+                .navigationTitle("Random Users")
+
+                Button(action: {
+                    print("Button")
+                    Task {
+                        await userData.loadUsers()
+                    }
+                }, label: {
+                    Text("Refresh list")
+                        .foregroundColor(Color.white)
+                        .padding(.vertical, 7)
+                        .padding(.horizontal, 20)
+                        .buttonStyle(.bordered)
+                        .background(Color.secondary)
+                        .cornerRadius(10)
+                })
+                .padding(.vertical, 10)
             }
-            .navigationTitle("Random Users")
+
         }
     }
 }
