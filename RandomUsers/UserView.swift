@@ -9,6 +9,8 @@ import SwiftUI
 
 struct UsersView: View {
     @StateObject var userData = UserData()
+    @State var showAlert = false
+    @State var alertText = ""
 
     var body: some View {
         NavigationView {
@@ -29,7 +31,12 @@ struct UsersView: View {
                 Button(action: {
                     print("Button")
                     Task {
-                        await userData.loadUsers()
+                        do {
+                            try await userData.loadUsers()
+                        } catch AppErrors.urlError {
+                            alertText = "URL error"
+                            showAlert = true
+                        }
                     }
                 }, label: {
                     Text("Refresh list")
@@ -43,6 +50,22 @@ struct UsersView: View {
                 .padding(.vertical, 10)
             }
 
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text(verbatim: alertText),
+                dismissButton: .default(Text("Ok"))
+            )
+        }
+        .onAppear {
+            Task {
+                do {
+                    try await userData.loadUsers()
+                } catch AppErrors.urlError {
+                    alertText = "URL error"
+                    showAlert = true
+                }
+            }
         }
     }
 }
