@@ -44,7 +44,7 @@ struct UsersView: View {
                         .padding(.vertical, 7)
                         .padding(.horizontal, 20)
                         .buttonStyle(.bordered)
-                        .background(Color.secondary)
+                        .background(Color("ButtonColor"))
                         .cornerRadius(10)
                 })
                 .padding(.vertical, 10)
