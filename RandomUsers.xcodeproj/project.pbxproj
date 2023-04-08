@@ -14,7 +14,6 @@
 		472CA0DF29E0F242005DCD71 /* randomUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = 472CA0DD29E0F242005DCD71 /* randomUsers.json */; };
 		472CA0E029E0F242005DCD71 /* randomUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = 472CA0DD29E0F242005DCD71 /* randomUsers.json */; };
 		473841EE2885E44F008E5BB0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473841ED2885E44F008E5BB0 /* User.swift */; };
-		47449F5E28F6D28D001323C4 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = 47449F5D28F6D28D001323C4 /* ToastUI */; };
 		479CB54C287B97710056A530 /* RandomUsersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479CB54B287B97710056A530 /* RandomUsersApp.swift */; };
 		479CB54E287B97710056A530 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479CB54D287B97710056A530 /* UserView.swift */; };
 		479CB550287B97730056A530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479CB54F287B97730056A530 /* Assets.xcassets */; };
@@ -66,7 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47449F5E28F6D28D001323C4 /* ToastUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,10 +89,17 @@
 			isa = PBXGroup;
 			children = (
 				479CB576287CE10C0056A530 /* UserFetchingClient.swift */,
-				479CB578287E1A510056A530 /* UserData.swift */,
 				473841ED2885E44F008E5BB0 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		472CA0E329E0F433005DCD71 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				479CB578287E1A510056A530 /* UserData.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		479CB53F287B97710056A530 = {
@@ -125,6 +130,7 @@
 				479CB54B287B97710056A530 /* RandomUsersApp.swift */,
 				479CB54D287B97710056A530 /* UserView.swift */,
 				472CA0DC29E0D0F3005DCD71 /* Model */,
+				472CA0E329E0F433005DCD71 /* ViewModel */,
 				479CB54F287B97730056A530 /* Assets.xcassets */,
 				479CB551287B97730056A530 /* Preview Content */,
 			);
@@ -174,7 +180,6 @@
 			);
 			name = RandomUsers;
 			packageProductDependencies = (
-				47449F5D28F6D28D001323C4 /* ToastUI */,
 			);
 			productName = RandomUsers;
 			productReference = 479CB548287B97710056A530 /* RandomUsers.app */;
@@ -249,7 +254,6 @@
 			);
 			mainGroup = 479CB53F287B97710056A530;
 			packageReferences = (
-				47449F5C28F6D28D001323C4 /* XCRemoteSwiftPackageReference "ToastUI" */,
 			);
 			productRefGroup = 479CB549287B97710056A530 /* Products */;
 			projectDirPath = "";
@@ -650,25 +654,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		47449F5C28F6D28D001323C4 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/quanshousio/ToastUI";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		47449F5D28F6D28D001323C4 /* ToastUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 47449F5C28F6D28D001323C4 /* XCRemoteSwiftPackageReference "ToastUI" */;
-			productName = ToastUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 479CB540287B97710056A530 /* Project object */;
 }

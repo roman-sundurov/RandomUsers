@@ -7,14 +7,6 @@
 
 import Foundation
 
-struct Response: Decodable {
-    let users: [User]
-
-    enum CodingKeys: String, CodingKey {
-        case users = "results"
-    }
-}
-
 struct User: Decodable, Identifiable {
     let id: String
     let name: Name
@@ -33,12 +25,12 @@ struct User: Decodable, Identifiable {
         id = try loginInfo.decode(String.self, forKey: .uuid)
     }
 
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case name
         case login
         case picture
     }
-    enum LoginInfoCodingKeys: String, CodingKey {
+    private enum LoginInfoCodingKeys: String, CodingKey {
         case uuid
     }
 }
