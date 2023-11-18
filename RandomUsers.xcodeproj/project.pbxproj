@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		470CC2D529E09BDC000A6F42 /* swiftlint.yml in Sources */ = {isa = PBXBuildFile; fileRef = 470CC2D429E09BDC000A6F42 /* swiftlint.yml */; };
-		470CC2D629E09BDC000A6F42 /* swiftlint.yml in Sources */ = {isa = PBXBuildFile; fileRef = 470CC2D429E09BDC000A6F42 /* swiftlint.yml */; };
-		470CC2D729E09BDC000A6F42 /* swiftlint.yml in Sources */ = {isa = PBXBuildFile; fileRef = 470CC2D429E09BDC000A6F42 /* swiftlint.yml */; };
 		472CA0DE29E0F242005DCD71 /* randomUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = 472CA0DD29E0F242005DCD71 /* randomUsers.json */; };
 		472CA0DF29E0F242005DCD71 /* randomUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = 472CA0DD29E0F242005DCD71 /* randomUsers.json */; };
 		472CA0E029E0F242005DCD71 /* randomUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = 472CA0DD29E0F242005DCD71 /* randomUsers.json */; };
@@ -229,7 +226,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					479CB547287B97710056A530 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -326,7 +323,6 @@
 				479CB54C287B97710056A530 /* RandomUsersApp.swift in Sources */,
 				479CB579287E1A510056A530 /* UserData.swift in Sources */,
 				473841EE2885E44F008E5BB0 /* User.swift in Sources */,
-				470CC2D529E09BDC000A6F42 /* swiftlint.yml in Sources */,
 				479CB577287CE10C0056A530 /* UserFetchingClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,7 +331,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				470CC2D629E09BDC000A6F42 /* swiftlint.yml in Sources */,
 				479CB55D287B97730056A530 /* RandomUsersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +340,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				479CB569287B97730056A530 /* RandomUsersUITestsLaunchTests.swift in Sources */,
-				470CC2D729E09BDC000A6F42 /* swiftlint.yml in Sources */,
 				479CB567287B97730056A530 /* RandomUsersUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -402,6 +397,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -430,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -462,6 +459,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -490,6 +488,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RandomUsers/Preview Content\"";
 				DEVELOPMENT_TEAM = 6VWFU6AND8;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -519,6 +518,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RandomUsers/Preview Content\"";
 				DEVELOPMENT_TEAM = 6VWFU6AND8;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
